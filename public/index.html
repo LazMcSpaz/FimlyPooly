@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fimly Pooly Game Studios</title>
+<meta name="description" content="Fimly Pooly Game Studios — an independent game studio.">
+<meta property="og:title" content="Fimly Pooly Game Studios">
+<meta property="og:description" content="An independent game studio.">
+<meta property="og:image" content="https://fimlypooly.com/logo.png">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="/favicon.png">
+<style>
+  :root {
+    --navy: #131c3a;
+    --cream: #fdf1d8;
+    --amber: #f5a800;
+    --orange: #c8641c;
+    --muted: #5b6381;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { height: 100%; }
+  body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    color: var(--navy);
+    font-family: "Trebuchet MS", "Segoe UI", system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+  }
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.25rem 3rem;
+  }
+  picture {
+    display: block;
+    width: min(100%, 640px);
+  }
+  .logo {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  h1 {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .tagline {
+    margin-top: 1.25rem;
+    max-width: 30rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+    text-wrap: balance;
+  }
+  .soon {
+    margin-top: 0.5rem;
+    color: var(--muted);
+  }
+  .button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 1.75rem;
+    background: var(--navy);
+    color: var(--cream);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    border-radius: 999px;
+    border: 3px solid var(--navy);
+    box-shadow: 0 5px 0 var(--amber);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+  .button:hover { transform: translateY(-2px); box-shadow: 0 7px 0 var(--amber); }
+  .button:active { transform: translateY(3px); box-shadow: 0 2px 0 var(--amber); }
+  .button:focus-visible, footer a:focus-visible {
+    outline: 3px solid var(--orange);
+    outline-offset: 3px;
+  }
+  footer {
+    padding: 1.25rem;
+    background: var(--navy);
+    color: var(--cream);
+    font-size: 0.9rem;
+  }
+  footer a { color: var(--amber); }
+  @media (prefers-reduced-motion: reduce) {
+    .button { transition: none; }
+  }
+</style>
+</head>
+<body>
+  <main>
+    <h1>Fimly Pooly Game Studios</h1>
+    <picture>
+      <source srcset="/logo.webp" type="image/webp">
+      <img class="logo" src="/logo.png" width="1200" height="800"
+           alt="Fimly Pooly Game Studios logo: a grumpy orange tabby and a wide-eyed fluffy gray cat">
+    </picture>
+    <p class="tagline">We're a small independent studio making games.</p>
+    <p class="soon">Our first titles are in the works. More soon.</p>
+    <a class="button" href="mailto:support@fimlypooly.com">Contact us</a>
+  </main>
+  <footer>
+    <p>&copy; <span id="year">2026</span> Fimly Pooly Game Studios &middot;
+      <a href="mailto:support@fimlypooly.com">support@fimlypooly.com</a></p>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
